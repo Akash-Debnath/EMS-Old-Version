@@ -1,0 +1,49 @@
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
+class G_Model extends CI_Model {
+    const DB_TABLE = 'abstract';
+    const DB_TABLE_PK = 'abstract';
+    
+    public function setLog($logData){
+        
+        $this->db->insert('activity_log', $logData);
+    }
+  
+    /**
+     * Populate from an array or standard class.
+     * @param mixed $row (array or object)
+     */
+    public function populate($row) {
+        foreach ($row as $key => $value) {
+            $this->$key = $value;
+        }
+    }
+    /**
+     * Load from the database.
+     * @param int $id
+     */
+    public function load($id) {
+        $query = $this->db->get_where($this::DB_TABLE, array(
+            $this::DB_TABLE_PK => $id,
+        ));
+        $this->populate($query->row());         //return single object(first row)
+    }
+    /**
+     * Delete the current record.
+     */
+    public function delete() {
+        $this->db->delete($this::DB_TABLE, array(
+            $this::DB_TABLE_PK => $this->{$this::DB_TABLE_PK},
+        ));
+        unset($this->{$this::DB_TABLE_PK});
+    }
+
+    public function get_client_ip() {
+        $ipaddress = $this->input->ip_address();
+	if (!preg_match('/^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\z/', $ip)) {
+            $ipaddress = 'UNKNOWN';
+        }
+        return $ipaddress;
+    }
+
+}

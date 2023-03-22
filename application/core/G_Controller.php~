@@ -1,0 +1,623 @@
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
+class G_Controller extends CI_Controller{
+	
+    
+    public  $web_url = "http://www.genuitysystems.com/staff/ems/";
+    public  $web_url_main = "http://www.genuitysystems.com/staff/";
+    
+    //public  $web_url = "http://localhost/ems/";
+    
+    public $flexible_office_times = array('regular'=> '00:05:00', '09:00:00' => '00:15:00', );
+    public $default_office_time = array('start'=> '09:00:00', 'end' => '18:00:00', );
+    public $gsl_emp_id_limit = 5000;
+    
+	public $status_array = array(''=>'---Select---','T'=>'Probationary','C'=>'Contractual','R'=>'Regular','P'=>'Permanent');
+	public $blood_group_array = array(""=>"---Select---","A+"=>"A+","A-"=>"A-","B+"=>"B+","B-"=>"B-","AB+"=>"AB+","AB-"=>"AB-","O+"=>"O+","O-"=>"O-");
+	public $gender_array = array(""=>"---Select---","M"=>"Male","F"=>"Female");
+	public $day_array = array("sun"=>"Sunday","mon"=>"Monday","tue"=>"Tuesday","wed"=>"Wednesday","thu"=>"Thursday","fri"=>"Friday", "sat"=>"Saturday");
+	public $default_weekend = array("sun"=>"N","mon"=>"N","tue"=>"N","wed"=>"N","thu"=>"N","fri"=>"Y", "sat"=>"Y");
+	public $rosterType = array("CA"=>"S","SY"=>"S", "TE"=> "S"); //S=Slot,R=Regular
+	public $period_evaluation = array('from'=>'07-01', 'to'=>'06-30');
+	
+	public $max_holiday_in_week = 2;
+	
+	public $activeManagementAry = array( "DM" );
+		
+	public $leaves_array = array(
+	    'HL'=>'Half Day Annual',
+	    'AL'=>'Annual',
+	    'SL'=>'Sick(Ordinary)',
+	    'SLM'=>'Sick(Severe)',
+	    'PL'=>'Paternity',
+	    'ML'=>'Maternity',
+	    'WL'=>'Wedding',
+	    'LWP'=>'Without Pay',
+	    'TL'=>'Training',
+	    'SP'=>'Special',
+	    'CA' => 'Carry Forwarded Annual'
+	);
+	
+	public $genuity_leaves_array = array(
+	    'PL'=>'Paternity',
+	    'ML'=>'Maternity',
+	    'WL'=>'Wedding',
+	);	
+	public $leave_default_array = array(
+	    'HL'=>15,
+	    'AL'=>15,
+	    'SL'=>5,
+	    'SLM'=>15,
+	    'PL'=>20,
+	    'ML'=>240,
+	    'WL'=>array('M'=>10,'F'=>15),
+	    //'WLM'=>10,
+	    //'WLF'=>15,
+	    'LWP'=>0,
+	    'TL'=>0,
+	    'SP'=>0
+	);	
+	public $attachment_send_to = array(
+	    'A' => "Admin",
+	    'B' => "Management",	    
+	    'M' => "Manager",
+	    "C" => "Management & Manager",
+	    "E" => "All"
+	);
+
+	public $half_leave_slot = array(
+	    "FH"=>"First Half",
+	    "SH"=>"Secod Half"
+	);
+	public $sandwichLeave = array('AL');
+	public $late_early_leave = array(
+	    'e' => 'Have to go early from office',
+	    'l' => 'Will be late to come in office',
+	    'a' => 'Absent for official work outside',
+	    'u'=> 'Special absent',
+	);
+
+	/**
+	 * @var Session
+	 */
+	public $session;
+	public $myInfo;
+	public $myEmpId; 
+	
+	public $isManager = false;
+	public $isAdmin =  false;
+	public $isManagement = false;
+	
+	public $purchase_approvers;
+	public $purchase_creators;
+	public $purchase_verifiers;
+	public $purchase_access = FALSE;
+	
+	public $leave_access = FALSE;	
+	public $roster_setting_access = FALSE;
+	protected $rawNoticeBody = "";
+	
+		
+	public function __construct() {
+		parent::__construct();
+		$currentClass = $this->router->fetch_class();
+		$currentMethod = $this->router->fetch_method();
+
+		if($currentClass == 'remark' && $currentMethod == 'updateNotice' && isset($_POST['noticeBody']) && $_POST['isEncrypted'] == 'Y'){
+			$this->rawNoticeBody = $_POST['noticeBody'];
+			$data = &$_POST['noticeBody'];
+			$data = base64_encode($data);
+		} else if($currentClass == 'remark' && $currentMethod == 'updateNotice' && isset($_POST['noticeBody']) && $_POST['isEncrypted'] == 'N'){
+			$this->rawNoticeBody = $_POST['noticeBody'];
+		} else if($currentClass == 'remark' && $currentMethod == 'updateAttach' && isset($_POST['attachBody']) && $_POST['is_encrypted'] == 'Y'){
+			$this->rawNoticeBody = $_POST['attachBody'];
+			$data = &$_POST['attachBody'];
+			$data = base64_encode($data);
+		} else if($currentClass == 'remark' && $currentMethod == 'updateAttach' && isset($_POST['attachBody']) && $_POST['is_encrypted'] == 'N'){
+			$this->rawNoticeBody = $_POST['attachBody'];
+		}
+		$this->cleanAllParam();
+		
+		$this->load->model('requisition_model');
+		$this->load->model('leave_model');
+		
+		$this->load->library('session');
+		$this->myEmpId = $this->session->GetLoginId();
+		
+		$this->isManager = $this->session->IsManager($this->myEmpId);
+		$this->isAdmin = $this->session->IsAdmin($this->myEmpId);
+		$this->isManagement = $this->session->IsManagement($this->myEmpId);
+		
+		$this->myInfo = $this->session->GetMyBriefInfo();
+		
+		//$this->web_url = site_url();
+		$this->web_url_main = base_url();
+				
+		if(!empty($this->myEmpId)){
+            
+		    /*
+		    $this->purchase_creators = $this->requisition_model->getPrivilege(PURCHASE_CREATE);
+		    $this->purchase_approvers = $this->requisition_model->getPrivilege(PURCHASE_APPROVE);
+		    $this->purchase_verifiers = $this->requisition_model->getPrivilege(PURCHASE_VERIFY);
+
+		    if( in_array($this->myEmpId, $this->purchase_creators) ||
+		        in_array($this->myEmpId, $this->purchase_approvers) ||
+		        in_array($this->myEmpId, $this->purchase_verifiers) ){
+		            
+		        $this->purchase_access = true;
+		    }*/
+		    
+		    $leave_approvers = $this->leave_model->getPermissionPrivileger(LEAVE_APPROVE);
+		    $leave_verifiers = $this->leave_model->getPermissionPrivileger(LEAVE_VERIFY);
+		    
+		    if($this->session->IsManager($this->myEmpId) || $this->session->IsManagement($this->myEmpId) || $this->session->IsAdmin($this->myEmpId) || isset($leave_approvers[$this->myEmpId]) || isset($leaveVerifiers[$this->myEmpId]) ) {
+		    
+		        $this->leave_access = true;
+		    }
+		    
+		    $roster_setting_accessers = $this->leave_model->getPermissionPrivileger(ROSTER_SETTING);
+		    if($this->session->IsManager($this->myEmpId) || $this->session->IsManagement($this->myEmpId) || $this->session->IsAdmin($this->myEmpId) || isset($leave_approvers[$this->myEmpId]) || isset($roster_setting_accessers[$this->myEmpId]) ) {
+		    
+		        $this->roster_setting_access = true;
+		    }
+		    
+		    
+		}
+
+	}
+	
+	public function isLoggedIn()
+	{
+		if(!$this->session->IsLoggedIn()) {
+		    
+		    $this->load->helper('url');
+		    $this->session->set_lastpage(current_url());
+		    
+		    //echo $this->session->get_lastpage();
+		    //exit;
+		    redirect('user/login');
+		    
+			//redirect("user/login","refresh");
+		}
+	}
+	
+	
+	public function GetUserName()
+	{
+		return $this->session->GetUserName();
+	}
+	
+	public function view($page,$data=array()) {
+	    $this->load->view('header',$data);
+	    $this->load->view($page, $data);	    
+	    //$data["queryAllDetails"] = $this->gPrint(G_Model::getTotalQueries(), true);	    
+	    $this->load->view('footer',$data);
+	}
+	
+	public $mailTpl_color_deep = '#798B9F';
+	public $mailTpl_color_lite = '#3C8DBC';
+	
+	public $ems_start_date = "2008-01-01";	
+	
+	
+	public function getLeaveRequestCount()
+	{
+	    
+	    $approverToStaff = $this->leave_model->getPermissionPrivileger(LEAVE_APPROVE);
+	    $verifierToStaff = $this->leave_model->getPermissionPrivileger(LEAVE_VERIFY);
+	    
+	    
+	    $count = 0;	
+	    $dept_ary = $emp_id_ary = "";
+	    	    
+	    
+	    if($this->session->IsManager($this->myEmpId) || $this->session->IsManagement($this->myEmpId) || $this->session->IsAdmin($this->myEmpId) || isset($approverToStaff[$this->myEmpId]) || isset($verifierToStaff[$this->myEmpId]) ) {
+
+	        $dept_ary = $this->session->getManagerDepartments($this->myEmpId);
+
+	    } else {
+	        
+	        return 0;
+	    }
+	    	
+	    //===============Approval Request======================
+	    
+	    $query = "SELECT count(l.id) as total FROM leaves l, employee e, departments dp, designations ds WHERE e.emp_id=l.emp_id AND e.emp_id!='".$this->myEmpId."' AND e.dept_code=dp.dept_code AND e.designation=ds.id ";
+	    
+	    if(!empty($dept_ary) || isset($approverToStaff[$this->myEmpId])) {
+
+	        
+	        $dept_ary = is_array($dept_ary) ? implode("','", $dept_ary) : "";
+	        
+	        if(!empty($emp_id_ary)) {
+	            $emp_id_ary = implode("','",$emp_id_ary);
+	        }
+	        
+	        $query .= "AND (( e.dept_code IN('$dept_ary') OR e.emp_id IN('$emp_id_ary') ";
+	        
+	        if(isset($approverToStaff[$this->myEmpId])){
+	            
+	            $aryText = implode("','", $approverToStaff[$this->myEmpId]);
+	            $query .= " OR e.emp_id IN('$aryText')";
+	        }
+	        $query .= ") ) ";
+	        
+	    }
+	    $query .= "AND l.m_approved_date IS NULL";
+	    
+	    $result = $this->db->query($query);
+	
+	    $result = $result->row_array();
+
+	
+	    $count = $result["total"];
+	    //$approvalRequest = $result->result_array();
+	
+	
+	
+	
+	    //===============Verification Request======================
+	
+	    if($this->session->IsAdmin($this->myEmpId)) {
+	        	
+	        $query = "SELECT count(l.id) as total FROM leaves l, employee e, departments dp, designations ds WHERE e.emp_id=l.emp_id  AND e.dept_code=dp.dept_code AND e.designation=ds.id ";
+	        $query .= "AND l.m_approved_date IS NOT NULL AND l.admin_approve_date IS NULL ";
+
+	        if(isset($verifierToStaff[$this->myEmpId]) && !$this->session->IsAdmin($this->myEmpId)){
+	             
+	            $aryText = implode("','", $approverToStaff[$this->myEmpId]);
+	            $query .= " AND e.emp_id IN('$aryText')";
+	        }	        
+
+	        
+	        $result = $this->db->query($query);	        	
+	        $result = $result->row_array();
+	
+	        $count += $result["total"];
+	
+	    }
+	
+	    return $count;
+	}
+	
+	
+	public function getRosterPendingCount(){
+
+	    if($this->session->IsAdmin($this->myEmpId) || $this->session->IsManagement($this->myEmpId) || $this->session->IsAdmin($this->myEmpId) || isset($approverToStaff[$this->myEmpId]) || isset($verifierToStaff[$this->myEmpId]) ) {
+	        
+	        $this->db->select('id');
+    	    $this->db->from('rostering_control');    	    
+    	    $this->db->where('admin_id','');
+
+    	    $query = $this->db->get();
+    	    
+    	    return $query->num_rows();
+	
+	    } else {
+	         
+	        return 0;
+	    }
+	}
+
+	
+	/*
+	public function getRequisitionCount()
+	{   
+	    
+	    return 0;
+	    
+	    
+	    $count = 0;
+
+	    //priviledge settings
+	    if( $this->isManagement || $this->isManager ) {
+
+	        $staffAry = array();	        
+	        
+	        $deptAry = $this->session->getManagerDepartments($this->myEmpId);
+	        
+	        $this->db->select('count(r.voucher_id) as total');
+	        $this->db->from('store_req_voucher r');
+	        $this->db->where('r.approved_by =', "");
+	        
+	        if(!$this->isManagement){
+
+	            $this->db->join('employee e', " r.requested_by = e.emp_id", 'left');	             
+	            $this->db->where_in('e.dept_code', $deptAry);
+	        }
+	        	        
+            $query = $this->db->get();            
+            $result = $query->row();
+            
+            $count +=  $result->total;
+	    }
+	    
+	    if ( $this->isAdmin) {
+
+	        $this->db->select('count(r.voucher_id) as total');
+	        $this->db->from('store_req_voucher r');
+	        $this->db->where('approved_by !=', "");
+	        $this->db->where('verified_by =', "");
+	        $query = $this->db->get();
+	        $result = $query->row();
+	        
+	        $count +=  $result->total;
+	    }
+
+	    return $count;
+	}
+	
+	
+	public function getPurchaseCount(){
+	    
+	    return 0;
+	    	    
+	    $count = 0;
+            
+        // get priviledge
+
+	    if(in_array($this->myEmpId, $this->purchase_approvers)) {
+	         
+	        $this->db->select('count(voucher_id) as total');
+	        $this->db->from('store_voucher');
+	        $this->db->where('approved_by =', "");
+
+	        $query = $this->db->get();
+	        $result = $query->row();
+	
+	        $count +=  $result->total;
+	    }
+	     
+	    if(in_array($this->myEmpId, $this->purchase_verifiers)) {
+	
+	        $this->db->select('count(voucher_id) as total');
+	        $this->db->from('store_voucher');
+	        $this->db->where('approved_by !=', "");
+	        $this->db->where('verified_by =', "");
+	        $query = $this->db->get();
+	        $result = $query->row();
+	         
+	        $count +=  $result->total;
+	    }
+	
+	    return $count;
+	}*/
+	
+	public function getUnreadNoticeCount($myEmdId) {
+	    $query = "SELECT count(id) as total FROM notice WHERE read_by NOT LIKE '%$myEmdId%'";
+	    $result = $this->db->query($query);
+	    $result = $result->row_array();
+	
+	    $count = $result["total"];
+	
+	    return $count;
+	}
+	
+	public function getUnreadAtachmentCount($myEmdId) {
+	     
+	    $messageToAry = $this->getAttachTo();
+	     
+	    $messageTo = "'".implode("','",$messageToAry)."'";
+	    $query = "SELECT count(`id`) as total FROM (`attach_msg`) WHERE `message_to` IN ( $messageTo ) AND read_by NOT LIKE '%$myEmdId%'";
+	     
+	    $result = $this->db->query($query);
+	    $result = $result->row_array();
+	
+	    $count = $result["total"];
+	    return $count;
+	}
+	
+	public function  getAttendanceRequestCount() {
+	    $dept_ary = "";
+	    $type =array(
+	        'admin'=>false,
+	        'manager'=>false,
+	        'management'=>false,
+	    );
+	    $this->load->model("attendance_model");
+	
+	    if($this->session->IsAdmin($this->myEmpId)) $type['admin'] = true;
+	    if($this->session->IsManager($this->myEmpId)) $type['manager'] = true;
+	    if($this->session->IsManagement($this->myEmpId)) $type['management'] = true;
+	
+	    if( $type['manager'] ||$type['management'] || $type['admin']) {
+	        
+	        if(!$type['management'] && $type['manager']){
+	            $dept_ary = $this->session->getManagerDepartments($this->myEmpId);
+	        }
+	        	
+	        $approvalRequest = $this->attendance_model->getPendingRequest($dept_ary, 'approval', $this->myInfo->userDeptCode);
+	
+	        $verificationRequest = array();
+	        if($type['admin']) {
+
+	            $verificationRequest = $this->attendance_model->getPendingRequest($dept_ary, 'verification', $this->myInfo->userDeptCode);
+	        }
+	        	
+	        return count($approvalRequest) + count($verificationRequest);
+	    }
+
+	}
+	
+	public function getAttachTo(){
+	    $text = array();
+	     
+	    $userType = $this->session->GetUserType();
+	    $userId = $this->session->GetLoginId();
+	
+	    if ($userType == "M" || $this->session->IsManager($userId)) {
+	        $text = Array('M', 'C', 'E');
+	    } else if($userType == "B" || $this->session->IsManagement($userId)) {
+	        $text = Array('B', 'C', 'E');
+	    }
+	
+	    if($userType == 'A' || $this->session->IsAdmin($userId)){
+	        $text[] = "A";
+	        $text[] = "E";
+	    }else if($userType == 'E'){
+	        $text = array('E');
+	    }
+	
+	    return $text;
+	}
+	
+	public $message = array(
+	    'insert_s'=>'Data has been added successfully',
+	    'insert_f'=>'Insertion has been failed! Try again later.',
+	    'update_s'=>'Data has been updated successfully',
+	    'update_f'=>'Update has been failed! Try again later.',
+	    'delete_s'=>'Data has been deleted successfully',
+	    'delete_f'=>'Deletion has been failed! Try again later.',
+	    'mail_s' => 'Mail is sent successfully',
+	    'mail_f' => "Mail isn't sent successfully",
+	    'no_priv' => "You have no privilege!",
+	);
+	
+	/*public function tadaysLeaveCount() {
+	    $today = date('Y-m-d');
+	    $sql = "SELECT count(id) as total ".
+	        "FROM leaves ".
+	        "WHERE ".
+	        "leave_start<='$today' AND ".
+	        "leave_end>='$today' AND admin_approve_date IS NOT NULL";
+	    
+	    $result = $this->db->query($sql);
+	    $result = $result->row_array();
+	    
+	    $count = $result["total"];
+	    return $count;
+	}
+	
+	public function tadaysJoinCount() {
+	    $yesterday = date("Y-m-d", strtotime(" -1 days"));
+	    $sql = "SELECT count(id) as total ".
+        	"FROM leaves ".
+        	"WHERE leave_end='$yesterday' AND admin_approve_date IS NOT NULL";
+	     
+	    $result = $this->db->query($sql);
+	    $result = $result->row_array();
+	     
+	    $count = $result["total"];
+	    return $count;
+	}*/
+	
+	public function tadaysLeaveCount() {
+		$today = date ( 'Y-m-d' );
+		$sql = "SELECT emp_id " . "FROM leaves " . "WHERE " . "leave_start<='$today' AND " . "leave_end>='$today' AND admin_approve_date IS NOT NULL";
+
+		$result = $this->db->query ( $sql )->result();
+		//$result = $result->row_array ();
+
+		$count = 0;
+		$this->emp_id_in_leave = "";
+		//print_r($result);
+		foreach ($result as $rowData){
+			$count++;
+			if (empty($this->emp_id_in_leave)) {
+				$this->emp_id_in_leave = $rowData->emp_id;
+			}else {
+				$this->emp_id_in_leave .= "_".$rowData->emp_id;
+			}
+		}
+		return $count;
+	}
+	
+	public function tadaysJoinCount() {
+		$temp_emp_id_ary = explode("_",$this->emp_id_in_leave);
+
+		$yesterday = date ( "Y-m-d", strtotime ( " -1 days" ) );
+		$sql = "SELECT emp_id " . "FROM leaves " . "WHERE leave_end='$yesterday' AND admin_approve_date IS NOT NULL";
+
+		$result = $this->db->query ( $sql )->result();
+		$count = 0;
+		foreach($result as $employee){
+			if(!in_array($employee->emp_id,$temp_emp_id_ary)){
+				$count++;
+			}
+		}
+		return $count;
+	}
+	
+	function gPrint($obj, $isReturn=false) {
+	    $a = str_replace("`", "", $obj);
+	    $a = print_r ( $a, true );
+	    $a = "<pre>" . $a;	    
+	    $a = preg_replace ( "/Array/", "<font style='font-weight:bold;' color='Red'>Array</font>", $a );
+	    $a = preg_replace ( "/([Oo]bject)/", "<font style='font-weight:bold;' color='Green'>$1</font>", $a );
+	    $a = preg_replace ( "/(\[.*?\])/", "<font style='font-weight:bold;' color='#917CE0'>$1</font>", $a );
+	    $a = preg_replace ( "/([\[\]])/", "<font color='#5CC2C4'>$1</font>", $a );
+	    $a = preg_replace ( "/=>/", "<font color='#34925E'>=></font>", $a );
+	    $a .= "</pre>";
+	    if($isReturn){
+	        return $a;
+	    }else{
+	        echo $a;
+	    }	
+	}
+	
+	function addActivityLog($actType='V', $affected='', $logText='', $login_id=''){
+	    //$actType => L=Login, A=Add, U=Update, D=Delete, V=View
+	    $login_id = empty($login_id) ? $this->session->GetLoginId() : $login_id;
+	    $logData = array('emp_id'=>$login_id, "activity"=>$actType, "affected"=>$affected, "log_text"=>$logText, "log_time"=> date('Y-m-d H:i:s'));
+	    $this->db->insert('activity_log', $logData);
+	}
+
+	function cleanAllParam(){
+        $preg = "/\-\-|[;'\"]|eval|cast\s*\(|base64_decode|gzinflate|str_rot13|xor|sleep|select|schema|sysdate|server|cookie|session|x_forward_for|union|column_name|IFnulL|javascript/i";
+	$postExceptFields = array('dataObj', 'weekendObj');
+
+        foreach ($_GET as &$value){
+            if(!empty($value)){
+                if(is_string($value)){
+                    $value = preg_replace($preg, "", $value);
+                    $value = $this->mysql_escape_mimic($value);
+                }elseif(is_array($value)){
+                    foreach ($value as &$v){
+                        $v = preg_replace($preg, "", $v);
+                        $v = $this->mysql_escape_mimic($v);
+                    }
+                }
+            }
+        }
+        foreach ($_POST as $postKey=>&$value){
+		if (in_array($postKey, $postExceptFields)){
+			continue;
+		}
+            if(!empty($value)){
+                if(is_string($value)){
+                    $value = preg_replace($preg, "", $value);
+                    $value = $this->mysql_escape_mimic($value);
+                }elseif(is_array($value)){
+                    foreach ($value as &$v){
+                        $v = preg_replace($preg, "", $v);
+                        $v = $this->mysql_escape_mimic($v);
+                    }
+                }
+            }
+        }
+        foreach ($_REQUEST as &$value){
+            if(!empty($value)){
+                if(is_string($value)){
+                    $value = preg_replace($preg, "", $value);
+                    $value = $this->mysql_escape_mimic($value);
+                }elseif(is_array($value)){
+                    foreach ($value as &$v){
+                        $v = preg_replace($preg, "", $v);
+                        $v = $this->mysql_escape_mimic($v);
+                    }
+                }
+            }
+        }
+    }
+
+    function mysql_escape_mimic($inputValue) {
+        //Used as mysql_real_escape_string alternative
+        if(!empty($inputValue) && is_string($inputValue)) {
+            return str_replace(array('\\', "\0", "\n", "\r", "'", '"', "\x1a"), array('\\\\', '\\0', '\\n', '\\r', "\\'", '\\"', '\\Z'), $inputValue);
+        }
+
+        return $inputValue;
+    }
+}
+
+?>

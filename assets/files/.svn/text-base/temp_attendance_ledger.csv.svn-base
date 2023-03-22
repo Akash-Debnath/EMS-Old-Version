@@ -1,0 +1,9 @@
+Sl,Emp ID,Name,Designation,Department,Total Working Day,Total Present Day,Total Absent Day, Total Weekend,Total Late Login,Total Early Logout,Avarage Working Time, Total Leave Day,Total System Fault Day,Extra Working Time
+1,0107,Md. Shahidul Islam Salim,Lead Software Engineer, iPhone,Software,18,18,0,8,15,16,-21:-27:-54,2,0,-46:-3:-4
+2,0204,Md. Walid Islam,Software Engineer,Software,20,20,0,8,16,17,-22:-1:-8,0,0,-55:-52:-59
+3,0178,Mousume Haque,Software Quality Assurance Engineer,Software,19,19,0,8,17,17,-20:-1:-8,1,0,00:00:0
+4,0179,M. Shofiqul Alam,Lead Software Engineer, Android,Software,20,20,0,8,16,17,-20:-57:-59,0,0,-22:-9:-30
+5,0180,S. M. Sarwar Hasan,Lead Software Engineer, Web,Software,20,20,0,8,16,17,-20:-32:-30,0,0,00:00:0
+6,0181,Nantu Chandra Das,Senior Software Engineer,Software,20,20,0,8,17,17,-20:-18:-21,0,0,-23:-20:-37
+7,0211,Mohammad Al-Amin,Web Designer,Software,20,20,0,8,16,17,-19:-29:-13,0,0,00:00:0
+8,0216,Mehedi Hasan,Software Engineer,Software,20,20,0,8,16,17,-19:-59:-42,0,0,00:00:0

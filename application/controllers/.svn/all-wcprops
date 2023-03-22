@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/genu-ems/!svn/ver/2/trunk/application/controllers
+END
+leave.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/genu-ems/!svn/ver/2/trunk/application/controllers/leave.php
+END
+attendance_api_manual.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/genu-ems/!svn/ver/2/trunk/application/controllers/attendance_api_manual.php
+END
+attendance_api_test.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/genu-ems/!svn/ver/2/trunk/application/controllers/attendance_api_test.php
+END
+attendance_api.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/genu-ems/!svn/ver/2/trunk/application/controllers/attendance_api.php
+END
+settings.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/genu-ems/!svn/ver/2/trunk/application/controllers/settings.php
+END
+attendance.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/genu-ems/!svn/ver/2/trunk/application/controllers/attendance.php
+END
+evaluation.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/genu-ems/!svn/ver/2/trunk/application/controllers/evaluation.php
+END
+requisition.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/genu-ems/!svn/ver/2/trunk/application/controllers/requisition.php
+END
+user_old.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/genu-ems/!svn/ver/2/trunk/application/controllers/user_old.php
+END
+user.php
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/genu-ems/!svn/ver/2/trunk/application/controllers/user.php
+END
+roster.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/genu-ems/!svn/ver/2/trunk/application/controllers/roster.php
+END
+test.php
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/genu-ems/!svn/ver/2/trunk/application/controllers/test.php
+END
+remark_old.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/genu-ems/!svn/ver/2/trunk/application/controllers/remark_old.php
+END
+remark.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/genu-ems/!svn/ver/2/trunk/application/controllers/remark.php
+END
+index.html
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/genu-ems/!svn/ver/2/trunk/application/controllers/index.html
+END
+evaluation_model.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/genu-ems/!svn/ver/2/trunk/application/controllers/evaluation_model.php
+END

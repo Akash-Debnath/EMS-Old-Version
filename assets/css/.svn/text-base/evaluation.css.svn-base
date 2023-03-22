@@ -1,0 +1,6 @@
+@CHARSET "ISO-8859-1";
+
+.inputDash {
+	border:none;
+	border-bottom:1px dashed #000000;
+}

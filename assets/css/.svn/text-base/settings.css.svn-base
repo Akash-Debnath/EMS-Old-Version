@@ -1,0 +1,6 @@
+@CHARSET "ISO-8859-1";
+
+.btn_add_right{
+	margin-top: 8px;
+	margin-right: 10px;
+}

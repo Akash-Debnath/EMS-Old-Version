@@ -1,0 +1,45 @@
+@CHARSET "ISO-8859-1";
+
+.dissableRow{
+	background-color: #10404E;
+}
+.addBorder {
+	border: 3px double #6da8dc;
+	padding: 0px;
+	background-color: #FFFF33;
+}
+
+.tokens {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+
+.tokens .token {
+    background-color: #eff2f7;
+    border: 1px solid #ccd5e4;
+    border-radius: 5px;
+    color: #000000;
+    cursor: default;
+    font-size: 11px;
+    height: auto !important;
+    margin: 3px;
+    overflow: hidden;
+    padding: 1px 3px;
+    white-space: nowrap;
+	display:inline-block;
+}
+
+.upper-padding{
+	padding-top: 12px;
+}
+
+.text-head {
+	background-color: #DFF0D8;
+ 	border: 1px solid #D9EDF7;
+	font-size: 17px;
+}
+
+.box-header-bg{
+	background-color: #D9EDF7;
+}

@@ -1,0 +1,44 @@
+
+*** These modified files were found in JOE when it aborted on Tue Jan 21 18:08:04 2020
+*** JOE was aborted because the terminal closed
+
+*** File '(Unnamed)'
+clamd.amavisd
+Genuity
+openweb
+58.65.224.3
+58.65.224.4
+*
+star_dhakatel_com
+iorecords
+
+*** File '(Unnamed)'
+sure2
+AUTH_OPTIONS
+gplex.com
+staff
+0143
+0282
+``.``
+chayan
+192.168.10.140
+192.168.10.240
+
+*** File '(Unnamed)'
+.forward
+.forward
+df00BI5mgK017495
+qf00BI5mgK017495
+.forward
+/etc/mail/aliases
+/etc/mail/aliases
+df00DIJgl1017045
+qf00DIJgl1017045
+attendance_api.php
+/etc/crontab
+
+*** File '* Startup Log *'
+Processing '/etc/joe/joerc'...
+Processing '/etc/joe/ftyperc'...
+Finished processing /etc/joe/ftyperc
+Finished processing /etc/joe/joerc

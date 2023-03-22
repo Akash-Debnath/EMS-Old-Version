@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/genu-ems/!svn/ver/2/trunk/application/models
+END
+requisition_model.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/genu-ems/!svn/ver/2/trunk/application/models/requisition_model.php
+END
+leave_model.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/genu-ems/!svn/ver/2/trunk/application/models/leave_model.php
+END
+roster_model_old.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/genu-ems/!svn/ver/2/trunk/application/models/roster_model_old.php
+END
+roster_model_030517.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/genu-ems/!svn/ver/2/trunk/application/models/roster_model_030517.php
+END
+roster_model.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/genu-ems/!svn/ver/2/trunk/application/models/roster_model.php
+END
+user_model.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/genu-ems/!svn/ver/2/trunk/application/models/user_model.php
+END
+settings_model.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/genu-ems/!svn/ver/2/trunk/application/models/settings_model.php
+END
+remark_model.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/genu-ems/!svn/ver/2/trunk/application/models/remark_model.php
+END
+department.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/genu-ems/!svn/ver/2/trunk/application/models/department.php
+END
+designation.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/genu-ems/!svn/ver/2/trunk/application/models/designation.php
+END
+index.html
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/genu-ems/!svn/ver/2/trunk/application/models/index.html
+END
+attendance_model.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/genu-ems/!svn/ver/2/trunk/application/models/attendance_model.php
+END
+evaluation_model.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/genu-ems/!svn/ver/2/trunk/application/models/evaluation_model.php
+END

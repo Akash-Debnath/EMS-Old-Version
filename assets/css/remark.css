@@ -1,0 +1,12 @@
+@CHARSET "ISO-8859-1";
+
+
+.delFile, .downFile {
+	
+	padding: 0px 5px 0px 5px;
+	margin-bottom: 3px;
+}
+
+.error {
+	color: #FF0000;
+}

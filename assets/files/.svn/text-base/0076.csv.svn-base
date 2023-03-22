@@ -1,0 +1,135 @@
+Emp ID,Name,Designation,Department,Mobile No
+0001,Md. Aminul Islam,Head of International Voice Carrier,International Voice Carrier,01713039715
+0002,Abu Taher,Manager Business Development,Overseas,01714016461
+0003,Md. Waliul Haque Tusar,System Administrator,System Administration,01713042943
+0006,Md. Samiul Aftad Chowdhury,Head of Software Department,Software,01712149089
+0011,Sultana Rahman,Accounts Executive,gPlex Software Solutions,01722235919
+0021,Md. Habibur Rahman,Manager,Admin & HR,01714007822
+0022,Md. Ashrafuzzaman,Manager,Accounts,01714020400
+0023,Md. Shafiqul Islam,Messenger,Messenger,01673714169
+0027,Md. Masudul Haque,Software Engineer,Software,01670161472
+0033,Md. Shafiul Azam Trafder,Manager,Support (In-House),01713 364648
+0034,Md. Aslam Uddin,Caretaker,Admin (MLSS),01720915179
+0035,Md. Moazzam Hossain,Caretaker,Admin (MLSS),01928131086
+0037,Shewly Begum,Executive,Admin & HR,01732762526
+0038,Md. Ripon Hossain,Technician,Technician,01714532803
+0039,Salah Uddin Ahmed,Software Engineer,Software,01670001051
+0041,Salina Akter,Executive,Accounts,01714020410
+0042,S. M. Apel Mahmood,Senior Executive- Commercial,Corporate / Commercial,01713364647
+0047,Subrata Halder,System Engineer,System Administration,01714020399
+0049,Abul Basid,Driver,Admin (MLSS),01714619264
+0050,Md. Kabir,Driver,Admin (MLSS),01718815124
+0051,Md. Jasim Gazi,Caretaker,Admin (MLSS),01727344107
+0052,Md. Saidul Islam Biplob,Technician,Technician,01912465441
+0053,Md. Anowor Hossain,Caretaker,Admin (MLSS),01914579231
+0054,Md. Abdur Rob,Asst System Administrator,System Administration,01714016470
+0061,Md. Anusur Azam,Asst System Administrator,System Administration,01714020401
+0064,Tanvir Parvez,Web Designer,Software,01712501213
+0070,Kolim Ullah Karim,Driver,Admin (MLSS),01714892323
+0071,Shek Jobed Ali,Driver,Admin (MLSS),01719963487
+0075,Shaon Shahriar,Asst System Administrator,System Administration,01714020406
+0076,Md. Shariful Alam (Sonet),Technical Marketing Analyst,Corporate / Commercial,01714016455
+0079,Shahjahan Siraj,Asst System Administrator,System Administration,01714020403
+0081,Md. Alamgir Hossain,Caretaker,Admin (MLSS),01922944438
+0082,Abdullah Al Mamun,Executive,Marketing,01714403183
+0088,Md. Lutful Kabir Majumder Rabi,Project Manager,Call Center,01713117971
+0100,Md. Maidul Islam,Executive,Marketing,01714403184
+0104,Syed Kawsar Hossain,Caretaker,Admin (MLSS),01674883863
+0106,Umme Honey Lima,Executive,Training,01713384893
+0107,Md. Shahidul Islam Salim,Software Engineer,Software,01712125634
+0108,Md. Rubayet Kabir,Executive,Accounts,01714020404
+0109,Ibrahim Kholifa,Cook,Admin (MLSS),01673892561
+0110,Md. Nasir,Cook,Admin (MLSS),01924093943
+0111,Md. Nasar Uddin Khan,Faculty Head,Training,01726263526
+0112,Md. Faruk,Cleaner,Admin (MLSS),
+0113,Sk. Kamruzzaman Prince,Head of Corporate Affairs,Corporate / Commercial,01713384891
+0114,Md. Hossain,Cleaner,Admin (MLSS),01927449326
+0118,Shamim Rayhan Mazumder,System Engineer,System Administration,01714020407
+0119,Syedul Bashar,Executive- Customer Care,Call Center,01674899331
+0122,Md.Saidur Rahman Sayeed,Caretaker,Admin (MLSS),01912511383
+0124,Asif Uz Zaman,Executive- Customer Care,Call Center,01556552080
+0125,Md. Mahfuz Alam,Cleaner,Admin (MLSS),01724659825
+0126,Mohammed Badruddin,System Engineer,System Administration,01714020408
+0127,Satyajit Roy Choudhury,Executive,International Voice Carrier,01714016457
+0128,Rashidul Islam Ronzon,Executive- Customer Care,Call Center,01912251437
+0129,Amit Saha,Executive,gPlex Software Solutions,01714016458
+0130,Abdullah Al Mamun,Supervisor,Call Center,01714020392
+0131,Md. Mokbul Hossen,Faculty,Training,01911547712
+0132,Kazi Mohammad Mazbah Uddin,Executive- Customer Care,Call Center,01777664475
+0134,Syed Md. Hashmi,Executive,International Voice Carrier,
+0135,Shahriar Alam Rana,Support Engineer,Support (In-House),01712672990
+0140,Amatul Bashir,Executive,Admin & HR,01714020398
+0141,Rayhan Uddin Ahammed,System Engineer,System Administration,01714020409
+0143,Mostofa Iqbal Mahmud,System Engineer,System Administration,01714020408
+0145,Towhid Mahmood,Executive,International Voice Carrier,
+0146,Junnatu Adan Rothi,Executive,Admin & HR,01671513169
+0147,Md. Sakib Hasan Khan,Executive,gPlex Software Solutions,01714016459
+0149,Rayhan Ahmed,Executive,Training,01713384894
+0150,Mohammad Abdullah Al Masum,Manager,Training,01714016467
+0151,Priyanka Chowdhury,Executive- Customer Care,Call Center,
+0152,Md. Elias,Security Guard,Admin (MLSS),01721961664
+0153,Md. Mizan,Cook,Admin (MLSS),01937653223
+0154,Mohammad Masud Rana,Asst System Administrator,System Administration,01713042942
+0155,Md. Ashraf-Uz-Zaman,Executive,gPlex Software Solutions,01714020396
+0156,Syedur Rahman,Executive- Customer Care,Call Center,01674876149
+0157,Moti Rahman,Business Analyst,Overseas,
+0158,Md. Shamsuzzaman,Software Engineer,Software,01717467709
+0159,Md. Abdullah Al Hafiz Khan,Software Engineer,Software,01674085010
+0160,Nahid Haider,Executive- Customer Care,Call Center,01730445694
+0161,Parvez Islam,Software Engineer,Software,01717139995
+0162,Sohana Chowdhury,Executive,International Voice Carrier,01714403183
+0163,Sonia Corraya,Executive,International Voice Carrier,01714403184
+0164,Md. Moktar Hosen,Driver,Admin (MLSS),01814086085
+0165,Firoz Ahmed,System Engineer,System Administration,01714016469
+0166,Eftakhar Chowdhury,Software Engineer,Software,01744227658
+0167,Sujoy Roy,Executive- Customer Care,Call Center,01911828468
+0168,Rabiba Rahman Chowdhury,Executive- Customer Care,Call Center,01929583443
+0169,Muksud Chowdhury Sonet,Executive- Customer Care,Call Center,01924094776
+0170,Md. Zahidul Islam,Executive- Customer Care,Call Center,01671440147
+0171,Nishat Jahan Adnan,Executive,Admin & HR,01714020398
+0172,Shahriar Imtiaz Halim,Executive,International Voice Carrier,01714403184
+0173,Md. Shajahan Ahmed,Executive,International Voice Carrier,01714016460
+0174,Md. Aminur Rahman,Systems Support Engineer,System Administration,01714020387
+0175,Md. Nazmul Islam,Systems Support Engineer,System Administration,01714016468
+0176,Md. Shakil Shikdar,Driver,Admin (MLSS),01729173583
+0177,Sheikh Zahidul Islam,Driver,Admin (MLSS),
+0178,Mousume Haque,QA Engineer,Software,01680172285
+0179,M. Shofiqul Alam,Software Engineer,Software,01922365777
+0180,S. M. Sarwar Hasan,Software Engineer,Software,01613305530
+0181,Nantu Chandra Das,Software Engineer,Software,01717567386
+0182,Sakib Noor Billah,Executive- Customer Care,Call Center,01911145914
+0183,Utpal Kumar Kundu,Executive,Accounts,01913580269
+0184,Md. Mazharul Islam,Accounts Executive,International Voice Carrier,01199338154
+0185,Mohammad Nuruzzaman,Executive- Customer Care,Call Center,01711945262
+0186,Kazi Mamun-Al-Ferdous,Systems Support Engineer,System Administration,01714020409
+0187,Md. Syfuddin Ferdous,Systems Support Engineer,System Administration,01714020403
+0188,Labiba Zahir,Executive- Customer Care,Call Center,01739549492
+0189,Md. Mahmudur Rahman,Executive,Training,01713384894
+0190,Swaty Sharmin,Executive,Training,01920759500
+0191,Tanuva Hossain Sarna,Executive- Customer Care,Call Center,01684046545
+0192,Md. Shahin Hosain,Faculty,Training,01817611628
+0193,Hasin Tasbir Ahmed,Executive- Customer Care,Call Center,01722970825
+0194,Abu Sayed Ayub Khan,Executive- Customer Care,Call Center,01726195471
+0195,Bishwajit Kumar Karmaker,System Engineer,System Administration,01714020409
+0196,Niaz Md. Mahmudul Haque,System Engineer,System Administration,01714007805
+0197,Shudha Tasnim Iqbal,System Engineer,System Administration,01714007806
+0198,Joy Roy,System Engineer,System Administration,01714007811
+0199,Md. Sakibur Rahman,QA Engineer,Software,01674309993
+0200,Md. Rakib Hassan Mullick,Software Engineer,Software,01926759356
+0201,Md. Rana,Cook,Admin (MLSS),01940512483
+0202,Farah Faiz,Executive,Admin & HR,01714020398
+0203,Paul S. Baroi,Executive- Customer Care,Call Center,01684206204
+2001,Visitor 1,Visitor,Visitor,
+2002,Visitor 2,Visitor,Visitor,
+2003,Visitor 3,Visitor,Visitor,
+2004,Visitor 4,Visitor,Visitor,
+2005,Visitor 5,Visitor,Visitor,
+2006,Visitor 6,Visitor,Visitor,
+2007,Visitor 7,Visitor,Visitor,
+2008,Visitor 8,Visitor,Visitor,
+2009,Visitor 9,Visitor,Visitor,
+2010,Visitor 10,Visitor,Visitor,
+CEO,M. Anis Rahman,Chief Executive Officer (CEO),Management,
+DM,K. Shahadat Hossain,Director Marketing (DM),Management,
+DO,Mohammed Sadiqur Rahman,Director Operations (DO),Management,
+PRESIDENT,Habib Rahman,President,Management,

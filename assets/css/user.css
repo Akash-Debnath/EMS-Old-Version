@@ -1,0 +1,35 @@
+@CHARSET "ISO-8859-1";
+
+.btnAddEmp {
+	margin-top: 6px;
+	
+}
+label {
+	text-align: right;
+    margin-top: 8px;
+}
+
+.hightfixed {
+	margin-bottom: 10px;
+}
+
+.sn {
+	width: 10px;
+}
+
+
+/* user Detail page*/
+#GradePersonModal div.modal-body {
+    max-height: calc(100vh - 210px);
+    overflow-y: auto;
+}
+.squareBox{
+    background: none repeat scroll 0 0 #e4e4ea;
+    border-radius: 3px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    position: relative;
+    width: 100%;
+	padding:5px;
+	
+}

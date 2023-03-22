@@ -1,0 +1,135 @@
+Emp ID,Name,Designation,Department,Blood Group
+0001,Md. Aminul Islam,Head of International Voice Carrier,International Voice Carrier,A+
+0002,Abu Taher,Manager Business Development,Overseas,B+
+0003,Md. Waliul Haque Tusar,System Administrator,System Administration,O+
+0006,Md. Samiul Aftad Chowdhury,Head of Software Department,Software,O+
+0011,Sultana Rahman,Accounts Executive,gPlex Software Solutions,A+
+0021,Md. Habibur Rahman,Manager,Admin & HR,A+
+0022,Md. Ashrafuzzaman,Manager,Accounts,AB+
+0023,Md. Shafiqul Islam,Messenger,Messenger,A+
+0027,Md. Masudul Haque,Software Engineer,Software,A+
+0033,Md. Shafiul Azam Trafder,Manager,Support (In-House),B+
+0034,Md. Aslam Uddin,Caretaker,Admin (MLSS),A+
+0035,Md. Moazzam Hossain,Caretaker,Admin (MLSS),A+
+0037,Shewly Begum,Executive,Admin & HR,A+
+0038,Md. Ripon Hossain,Technician,Technician,A+
+0039,Salah Uddin Ahmed,Software Engineer,Software,B+
+0041,Salina Akter,Executive,Accounts,A+
+0042,S. M. Apel Mahmood,Senior Executive- Commercial,Corporate / Commercial,AB+
+0047,Subrata Halder,System Engineer,System Administration,B+
+0049,Abul Basid,Driver,Admin (MLSS),
+0050,Md. Kabir,Driver,Admin (MLSS),
+0051,Md. Jasim Gazi,Caretaker,Admin (MLSS),A+
+0052,Md. Saidul Islam Biplob,Technician,Technician,A+
+0053,Md. Anowor Hossain,Caretaker,Admin (MLSS),A+
+0054,Md. Abdur Rob,Asst System Administrator,System Administration,O+
+0061,Md. Anusur Azam,Asst System Administrator,System Administration,A+
+0064,Tanvir Parvez,Web Designer,Software,B+
+0070,Kolim Ullah Karim,Driver,Admin (MLSS),
+0071,Shek Jobed Ali,Driver,Admin (MLSS),
+0075,Shaon Shahriar,Asst System Administrator,System Administration,O+
+0076,Md. Shariful Alam (Sonet),Technical Marketing Analyst,Corporate / Commercial,O+
+0079,Shahjahan Siraj,Asst System Administrator,System Administration,A+
+0081,Md. Alamgir Hossain,Caretaker,Admin (MLSS),A+
+0082,Abdullah Al Mamun,Executive,Marketing,A+
+0088,Md. Lutful Kabir Majumder Rabi,Project Manager,Call Center,A+
+0100,Md. Maidul Islam,Executive,Marketing,B+
+0104,Syed Kawsar Hossain,Caretaker,Admin (MLSS),A+
+0106,Umme Honey Lima,Executive,Training,B+
+0107,Md. Shahidul Islam Salim,Software Engineer,Software,B+
+0108,Md. Rubayet Kabir,Executive,Accounts,AB+
+0109,Ibrahim Kholifa,Cook,Admin (MLSS),A+
+0110,Md. Nasir,Cook,Admin (MLSS),A+
+0111,Md. Nasar Uddin Khan,Faculty Head,Training,A+
+0112,Md. Faruk,Cleaner,Admin (MLSS),A+
+0113,Sk. Kamruzzaman Prince,Head of Corporate Affairs,Corporate / Commercial,B+
+0114,Md. Hossain,Cleaner,Admin (MLSS),A+
+0118,Shamim Rayhan Mazumder,System Engineer,System Administration,O+
+0119,Syedul Bashar,Executive- Customer Care,Call Center,B+
+0122,Md.Saidur Rahman Sayeed,Caretaker,Admin (MLSS),A+
+0124,Asif Uz Zaman,Executive- Customer Care,Call Center,AB+
+0125,Md. Mahfuz Alam,Cleaner,Admin (MLSS),A+
+0126,Mohammed Badruddin,System Engineer,System Administration,A+
+0127,Satyajit Roy Choudhury,Executive,International Voice Carrier,B+
+0128,Rashidul Islam Ronzon,Executive- Customer Care,Call Center,A+
+0129,Amit Saha,Executive,gPlex Software Solutions,O+
+0130,Abdullah Al Mamun,Supervisor,Call Center,O+
+0131,Md. Mokbul Hossen,Faculty,Training,A+
+0132,Kazi Mohammad Mazbah Uddin,Executive- Customer Care,Call Center,O+
+0134,Syed Md. Hashmi,Executive,International Voice Carrier,O+
+0135,Shahriar Alam Rana,Support Engineer,Support (In-House),B+
+0140,Amatul Bashir,Executive,Admin & HR,O+
+0141,Rayhan Uddin Ahammed,System Engineer,System Administration,A+
+0143,Mostofa Iqbal Mahmud,System Engineer,System Administration,B+
+0145,Towhid Mahmood,Executive,International Voice Carrier,A+
+0146,Junnatu Adan Rothi,Executive,Admin & HR,B+
+0147,Md. Sakib Hasan Khan,Executive,gPlex Software Solutions,B+
+0149,Rayhan Ahmed,Executive,Training,O+
+0150,Mohammad Abdullah Al Masum,Manager,Training,A+
+0151,Priyanka Chowdhury,Executive- Customer Care,Call Center,O+
+0152,Md. Elias,Security Guard,Admin (MLSS),
+0153,Md. Mizan,Cook,Admin (MLSS),A+
+0154,Mohammad Masud Rana,Asst System Administrator,System Administration,A+
+0155,Md. Ashraf-Uz-Zaman,Executive,gPlex Software Solutions,A+
+0156,Syedur Rahman,Executive- Customer Care,Call Center,B+
+0157,Moti Rahman,Business Analyst,Overseas,A+
+0158,Md. Shamsuzzaman,Software Engineer,Software,B+
+0159,Md. Abdullah Al Hafiz Khan,Software Engineer,Software,O+
+0160,Nahid Haider,Executive- Customer Care,Call Center,O+
+0161,Parvez Islam,Software Engineer,Software,B+
+0162,Sohana Chowdhury,Executive,International Voice Carrier,O+
+0163,Sonia Corraya,Executive,International Voice Carrier,O+
+0164,Md. Moktar Hosen,Driver,Admin (MLSS),
+0165,Firoz Ahmed,System Engineer,System Administration,
+0166,Eftakhar Chowdhury,Software Engineer,Software,
+0167,Sujoy Roy,Executive- Customer Care,Call Center,B+
+0168,Rabiba Rahman Chowdhury,Executive- Customer Care,Call Center,B+
+0169,Muksud Chowdhury Sonet,Executive- Customer Care,Call Center,A+
+0170,Md. Zahidul Islam,Executive- Customer Care,Call Center,AB-
+0171,Nishat Jahan Adnan,Executive,Admin & HR,O+
+0172,Shahriar Imtiaz Halim,Executive,International Voice Carrier,
+0173,Md. Shajahan Ahmed,Executive,International Voice Carrier,A+
+0174,Md. Aminur Rahman,Systems Support Engineer,System Administration,
+0175,Md. Nazmul Islam,Systems Support Engineer,System Administration,
+0176,Md. Shakil Shikdar,Driver,Admin (MLSS),
+0177,Sheikh Zahidul Islam,Driver,Admin (MLSS),
+0178,Mousume Haque,QA Engineer,Software,B+
+0179,M. Shofiqul Alam,Software Engineer,Software,
+0180,S. M. Sarwar Hasan,Software Engineer,Software,B+
+0181,Nantu Chandra Das,Software Engineer,Software,
+0182,Sakib Noor Billah,Executive- Customer Care,Call Center,
+0183,Utpal Kumar Kundu,Executive,Accounts,
+0184,Md. Mazharul Islam,Accounts Executive,International Voice Carrier,O+
+0185,Mohammad Nuruzzaman,Executive- Customer Care,Call Center,
+0186,Kazi Mamun-Al-Ferdous,Systems Support Engineer,System Administration,B+
+0187,Md. Syfuddin Ferdous,Systems Support Engineer,System Administration,
+0188,Labiba Zahir,Executive- Customer Care,Call Center,
+0189,Md. Mahmudur Rahman,Executive,Training,O+
+0190,Swaty Sharmin,Executive,Training,
+0191,Tanuva Hossain Sarna,Executive- Customer Care,Call Center,
+0192,Md. Shahin Hosain,Faculty,Training,
+0193,Hasin Tasbir Ahmed,Executive- Customer Care,Call Center,
+0194,Abu Sayed Ayub Khan,Executive- Customer Care,Call Center,
+0195,Bishwajit Kumar Karmaker,System Engineer,System Administration,
+0196,Niaz Md. Mahmudul Haque,System Engineer,System Administration,
+0197,Shudha Tasnim Iqbal,System Engineer,System Administration,
+0198,Joy Roy,System Engineer,System Administration,A+
+0199,Md. Sakibur Rahman,QA Engineer,Software,
+0200,Md. Rakib Hassan Mullick,Software Engineer,Software,
+0201,Md. Rana,Cook,Admin (MLSS),
+0202,Farah Faiz,Executive,Admin & HR,B+
+0203,Paul S. Baroi,Executive- Customer Care,Call Center,
+2001,Visitor 1,Visitor,Visitor,
+2002,Visitor 2,Visitor,Visitor,
+2003,Visitor 3,Visitor,Visitor,
+2004,Visitor 4,Visitor,Visitor,
+2005,Visitor 5,Visitor,Visitor,
+2006,Visitor 6,Visitor,Visitor,
+2007,Visitor 7,Visitor,Visitor,
+2008,Visitor 8,Visitor,Visitor,
+2009,Visitor 9,Visitor,Visitor,
+2010,Visitor 10,Visitor,Visitor,
+CEO,M. Anis Rahman,Chief Executive Officer (CEO),Management,A+
+DM,K. Shahadat Hossain,Director Marketing (DM),Management,O+
+DO,Mohammed Sadiqur Rahman,Director Operations (DO),Management,A+
+PRESIDENT,Habib Rahman,President,Management,A+

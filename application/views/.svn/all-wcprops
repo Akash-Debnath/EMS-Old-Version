@@ -1,0 +1,449 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/genu-ems/!svn/ver/2/trunk/application/views
+END
+requisition_voucher_form.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/genu-ems/!svn/ver/2/trunk/application/views/requisition_voucher_form.php
+END
+error.php
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/genu-ems/!svn/ver/2/trunk/application/views/error.php
+END
+evaluation_form.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/genu-ems/!svn/ver/2/trunk/application/views/evaluation_form.php
+END
+requisition_form.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/genu-ems/!svn/ver/2/trunk/application/views/requisition_form.php
+END
+welcome_message.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/genu-ems/!svn/ver/2/trunk/application/views/welcome_message.php
+END
+reset_password.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/genu-ems/!svn/ver/2/trunk/application/views/reset_password.php
+END
+leaveform_bk - Copy.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/genu-ems/!svn/ver/2/trunk/application/views/leaveform_bk%20-%20Copy.php
+END
+requisition_purchase.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/genu-ems/!svn/ver/2/trunk/application/views/requisition_purchase.php
+END
+attach_edit.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/genu-ems/!svn/ver/2/trunk/application/views/attach_edit.php
+END
+user_facilities.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/genu-ems/!svn/ver/2/trunk/application/views/user_facilities.php
+END
+message_view.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/genu-ems/!svn/ver/2/trunk/application/views/message_view.php
+END
+leaveform.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/genu-ems/!svn/ver/2/trunk/application/views/leaveform.php
+END
+notice.php
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/genu-ems/!svn/ver/2/trunk/application/views/notice.php
+END
+forgot_password.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/genu-ems/!svn/ver/2/trunk/application/views/forgot_password.php
+END
+user_edit.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/genu-ems/!svn/ver/2/trunk/application/views/user_edit.php
+END
+leave_all.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/genu-ems/!svn/ver/2/trunk/application/views/leave_all.php
+END
+privilege_working.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/genu-ems/!svn/ver/2/trunk/application/views/privilege_working.php
+END
+user_add.php
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/genu-ems/!svn/ver/2/trunk/application/views/user_add.php
+END
+header.php
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/genu-ems/!svn/ver/2/trunk/application/views/header.php
+END
+evaluation_detail.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/genu-ems/!svn/ver/2/trunk/application/views/evaluation_detail.php
+END
+not_found.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/genu-ems/!svn/ver/2/trunk/application/views/not_found.php
+END
+leaveform_bk.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/genu-ems/!svn/ver/2/trunk/application/views/leaveform_bk.php
+END
+leave.php
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/genu-ems/!svn/ver/2/trunk/application/views/leave.php
+END
+login_tester.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/genu-ems/!svn/ver/2/trunk/application/views/login_tester.php
+END
+holiday_request.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/genu-ems/!svn/ver/2/trunk/application/views/holiday_request.php
+END
+facility.php
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/genu-ems/!svn/ver/2/trunk/application/views/facility.php
+END
+leave_glance.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/genu-ems/!svn/ver/2/trunk/application/views/leave_glance.php
+END
+attendance.php
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/genu-ems/!svn/ver/2/trunk/application/views/attendance.php
+END
+upload_form.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/genu-ems/!svn/ver/2/trunk/application/views/upload_form.php
+END
+evaluation_message.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/genu-ems/!svn/ver/2/trunk/application/views/evaluation_message.php
+END
+holidays.php
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/genu-ems/!svn/ver/2/trunk/application/views/holidays.php
+END
+user.php
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/genu-ems/!svn/ver/2/trunk/application/views/user.php
+END
+delete_confirm.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/genu-ems/!svn/ver/2/trunk/application/views/delete_confirm.php
+END
+message.php
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/genu-ems/!svn/ver/2/trunk/application/views/message.php
+END
+missing_att_pending.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/genu-ems/!svn/ver/2/trunk/application/views/missing_att_pending.php
+END
+attach_detail.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/genu-ems/!svn/ver/2/trunk/application/views/attach_detail.php
+END
+requisition_lists.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/genu-ems/!svn/ver/2/trunk/application/views/requisition_lists.php
+END
+requisition_item.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/genu-ems/!svn/ver/2/trunk/application/views/requisition_item.php
+END
+att_pending.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/genu-ems/!svn/ver/2/trunk/application/views/att_pending.php
+END
+incident.php
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/genu-ems/!svn/ver/2/trunk/application/views/incident.php
+END
+footer.php
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/genu-ems/!svn/ver/2/trunk/application/views/footer.php
+END
+user_detail_old.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/genu-ems/!svn/ver/2/trunk/application/views/user_detail_old.php
+END
+requisition_vform_id.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/genu-ems/!svn/ver/2/trunk/application/views/requisition_vform_id.php
+END
+attendance_view.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/genu-ems/!svn/ver/2/trunk/application/views/attendance_view.php
+END
+user_detail.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/genu-ems/!svn/ver/2/trunk/application/views/user_detail.php
+END
+notice_detail.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/genu-ems/!svn/ver/2/trunk/application/views/notice_detail.php
+END
+department.php
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/genu-ems/!svn/ver/2/trunk/application/views/department.php
+END
+leave_request.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/genu-ems/!svn/ver/2/trunk/application/views/leave_request.php
+END
+missing_punch.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/genu-ems/!svn/ver/2/trunk/application/views/missing_punch.php
+END
+login.php
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/genu-ems/!svn/ver/2/trunk/application/views/login.php
+END
+settings_permission_priv.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/genu-ems/!svn/ver/2/trunk/application/views/settings_permission_priv.php
+END
+office_time.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/genu-ems/!svn/ver/2/trunk/application/views/office_time.php
+END
+leave_history.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/genu-ems/!svn/ver/2/trunk/application/views/leave_history.php
+END
+roster.php
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/genu-ems/!svn/ver/2/trunk/application/views/roster.php
+END
+roster_slot.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/genu-ems/!svn/ver/2/trunk/application/views/roster_slot.php
+END
+privilege.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/genu-ems/!svn/ver/2/trunk/application/views/privilege.php
+END
+notice_edit.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/genu-ems/!svn/ver/2/trunk/application/views/notice_edit.php
+END
+upload_fingerprint.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/genu-ems/!svn/ver/2/trunk/application/views/upload_fingerprint.php
+END
+roster_regular.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/genu-ems/!svn/ver/2/trunk/application/views/roster_regular.php
+END
+policy.php
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/genu-ems/!svn/ver/2/trunk/application/views/policy.php
+END
+att_request.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/genu-ems/!svn/ver/2/trunk/application/views/att_request.php
+END
+password.php
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/genu-ems/!svn/ver/2/trunk/application/views/password.php
+END
+designation.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/genu-ems/!svn/ver/2/trunk/application/views/designation.php
+END
+attach.php
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/genu-ems/!svn/ver/2/trunk/application/views/attach.php
+END
+note.php
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/genu-ems/!svn/ver/2/trunk/application/views/note.php
+END
+archive_person.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/genu-ems/!svn/ver/2/trunk/application/views/archive_person.php
+END
+alter.php
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/genu-ems/!svn/ver/2/trunk/application/views/alter.php
+END
+requisition_category.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/genu-ems/!svn/ver/2/trunk/application/views/requisition_category.php
+END
+roster_view.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/genu-ems/!svn/ver/2/trunk/application/views/roster_view.php
+END
+job_description.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/genu-ems/!svn/ver/2/trunk/application/views/job_description.php
+END
+attendance bk.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/genu-ems/!svn/ver/2/trunk/application/views/attendance%20bk.php
+END
+index.html
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/genu-ems/!svn/ver/2/trunk/application/views/index.html
+END
+roster_header.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/genu-ems/!svn/ver/2/trunk/application/views/roster_header.php
+END
+leave_report.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/genu-ems/!svn/ver/2/trunk/application/views/leave_report.php
+END

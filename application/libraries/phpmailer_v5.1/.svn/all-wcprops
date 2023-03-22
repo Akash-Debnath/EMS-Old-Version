@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/genu-ems/!svn/ver/2/trunk/application/libraries/phpmailer_v5.1
+END
+class.phpmailer.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/genu-ems/!svn/ver/2/trunk/application/libraries/phpmailer_v5.1/class.phpmailer.php
+END
+class.pop3.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/genu-ems/!svn/ver/2/trunk/application/libraries/phpmailer_v5.1/class.pop3.php
+END
+class.smtp.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/genu-ems/!svn/ver/2/trunk/application/libraries/phpmailer_v5.1/class.smtp.php
+END

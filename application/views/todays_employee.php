@@ -1,0 +1,177 @@
+<?php 
+$skin = "skin-blue";
+?>
+<?php include 'header.php'; ?>
+
+<link rel="stylesheet" href="<?php echo base_url();?>assets/css/pagination.css">
+
+<div class="row">
+	<label for="select_employee" class="col-sm-2">Search Employee</label>
+	<div class="col-sm-8 pull-left">
+		<select name="dept_code" class="selectpicker" id='select_employee'
+			data-live-search="true" >
+		<?php echo "<option value=''>Search by ID or name ...</option>"; ?>
+		<?php foreach ($todays_all_users as $user) {
+				echo "<option value='".$user['emp_id']."'>".$user['emp_id']." - ".$user['name']."</option>";	
+	    } ?>
+	    </select>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select name="dept_code" class="selectpicker" id='select_dept'
+				data-live-search="true">
+			<?php echo "<option value=''>Search by Department ...</option>"; ?>
+			<?php foreach ($all_dept as $dept=>$val) {
+				echo "<option value='".$dept."'>".$dept." - ".$val."</option>";
+	    	} ?>
+	    </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="<?= base_url();?>attendance/todays_employee" id="seeAll" style="display:none">See Todays All Employee</a>
+	</div>
+	<div class="col-sm-2 pull-right">
+		
+	</div>
+	
+	
+</div>
+<div class="clearfix hightfixed"></div>
+
+
+<div class="box-body table-responsive">
+	<table class="table table-bordered table-striped table-hover">
+		<thead>
+			<tr>
+				<th class="hidden-xs sn"></th>
+				<th class="hidden-xs">ID</th>
+				<th><span class="hidden-xs">Name</span> <span class="visible-xs">Staff</span>
+				</th>
+				<th class="hidden-xs">Department</th>
+				<th class="hidden-xs">Designation</th>
+				<th class="hidden-xs">Office Stime</th>
+				<th class="hidden-xs">In time</th>
+				<!-- <th class="hidden-xs">Out time</th> -->
+			</tr>
+		</thead>
+		<tbody id="changing_table">
+			<?php
+			$i = $offset;
+			foreach ($todays_users as $user){ 
+			?>
+				<tr>
+					<td class="hidden-xs"><?php echo ++$i; ?></td>
+					<td class="hidden-xs"><?php echo $user['emp_id']; ?></td>
+					<td><span class="hidden-xs"><a
+							href="<?php echo base_url();?>user/detail/<?php echo $user['emp_id']; ?>"><?php echo $user['name']; ?></a></span>
+						<div class="visible-xs">
+							<table>
+								<tr>
+									<td><b>ID</b></td>
+									<td width='10'><b>:</b></td>
+									<td><?php echo $user['emp_id']; ?></td>
+								</tr>
+								<tr>
+									<td><b>Name</b></td>
+									<td><b>:</b></td>
+									<td><a
+										href="<?php echo base_url();?>user/detail/<?php echo $user['emp_id']; ?>"><?php echo $user['name']; ?></a></td>
+								</tr>
+								<tr>
+									<td><b>Department</b></td>
+									<td><b>:</b></td>
+									<td><?php echo $dept_code[$user['dept_code']]; ?></td>
+								</tr>
+								<tr>
+									<td><b>Designation</b></td>
+									<td><b>:</b></td>
+									<td><?php echo $designations[$user['designation']]; ?></td>
+								</tr>
+								<tr>
+									<td><b>In time</b></td>
+									<td><b>:</b></td>
+									<td><?php echo $user['status']; ?></td>
+								</tr>
+								<!-- <tr>
+									<td><b>Out time</b></td>
+									<td><b>:</b></td>
+									<td><?php echo $user['jdate']; ?></td>
+								</tr> -->
+							</table>
+						</div></td>
+					<td class="hidden-xs"><?php echo $all_dept[$user['dept_code']]; ?></td>
+					<td class="hidden-xs"><?php echo $designations[$user['designation']]; ?></td>
+					<td class="hidden-xs"><?php echo $user['office_stime']; ?></td>
+					<td class="hidden-xs">
+						<?php
+							$class = "highlighted-green";
+							if ( 
+								
+								(strtotime($user['office_stime']) == strtotime('09.00.00') &&  strtotime("+15 minutes", strtotime($user['office_stime'])) < strtotime($user['stime']))
+								|| (strtotime($user['office_stime']) == strtotime('10.00.00') &&  strtotime("+59 seconds", strtotime($user['office_stime'])) < strtotime($user['stime']) )
+							 )
+							{
+								
+								$class = "highlighted-red";
+							}
+						?>
+						<span class="<?php echo $class; ?>"><?php echo date("g:i a", strtotime($user['stime'])) ?></span>
+					
+					</td>
+					<!-- <td class="hidden-xs"><?php echo $user['jdate']; ?></td> -->
+				</tr>
+				<?php
+				}
+				
+				?>
+		</tbody>
+	</table>
+</div>
+
+<div id="pagination">
+	<ul class="tsc_pagination">
+		<!-- Show pagination links -->
+    <?php foreach ($links as $link) {
+        echo "<li>". $link."</li>";
+    } ?>
+    </ul>
+</div>
+
+<script
+	src="<?php echo base_url();?>assets/lib/bootstrap/js/bootstrap-select.js"
+	type="text/javascript"></script>
+<link
+	href="<?php echo base_url();?>assets/lib/bootstrap/css/bootstrap-select.css"
+	type="text/css" rel="stylesheet" />
+<link
+	href="<?php echo base_url();?>assets/css/user.css"
+	type="text/css" rel="stylesheet" />
+	
+<?php include 'footer.php'; ?>
+
+<script>
+$(function(){
+	$("#select_employee").change(function(){
+		var emp_id = $(this).val();
+		location.href = "<?php echo base_url();?>user/detail/"+emp_id;
+	});
+
+});
+
+$(function(){
+	$("#select_dept").change(function(){
+		var dept_code = $(this).val();
+		// alert('hello ' +dept_code);
+		
+		$.ajax({
+			type: "POST",
+			url: '<?=base_url();?>attendance/attendance_by_dept/"',
+			dataType: 'text',
+			data: { dept_code: dept_code },
+			success: function(data){
+				$('#changing_table').html(data);
+				// alert(data);
+				// console.log(data);
+				// console.log(data.content);
+			}
+			
+		});
+	});
+
+});
+
+</script>

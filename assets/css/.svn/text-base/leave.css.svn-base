@@ -1,0 +1,187 @@
+@CHARSET "ISO-8859-1";
+
+/*leave request page css*/
+.page-header {
+	margin: 10px 0 7px;
+}
+body {
+  background: rgb(204,204,204); 
+}
+
+.dashUnderline2 {
+	border-bottom: 1px dashed #999;
+	display:inline-block;
+	min-width: 70px;
+	text-align:center;
+}
+.tableBox {
+    background: #e5e5e5 none repeat scroll 0 0;
+    border-radius: 3px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+    position: relative;
+	padding: 3px;
+    width: 100%;
+}
+
+.borderBox{
+    border:1px solid gray;
+	border-radius: 5px;
+    padding: 5px;
+    position: relative;
+    width: 100%;
+}
+
+
+.leaveHeader {
+	text-align:center;
+	padding:4px;
+	background-color: #54667A; 
+	color:#FFFFFF; 
+	font-weight:bold; 
+}
+
+
+#halfLeave, #otherLeave, #sickLeave{
+	display: none;
+}
+
+
+.bootstrap-select > .btn {
+    width: auto !important;
+}
+
+
+
+textarea {
+	height: 100% !important;
+	width: 100% !important; 
+	padding: 2px !important;
+}
+
+.forwardColor{
+	color: green;
+	cursor:pointer;
+}
+
+.custom-modal-header{
+	padding: 5px 4px 3px;
+}
+
+.modal-body table tr, .modal-body table th{
+	text-align: center;
+}
+
+.valign{
+	vertical-align: middle !important;
+}
+
+
+#halfLeave .form-group,
+#otherLeave .form-group{
+    margin-right: 15px;
+}
+#halfLeave label,
+#otherLeave label,
+.form-group label{
+    padding-right: 15px;
+}
+
+div.form-inline{
+	margin-bottom: 15px !important;
+}
+
+
+/*leave page css, leave page css, leave page css*/
+.sidebar-module-inset {
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    padding: 10px;
+}
+.sidebar-module {
+    margin: 0 -15px 10px;
+    padding: 0 10px;
+}
+.sidebar-header {
+	background-color: #798B9F;
+	padding: 3px;
+	color: white;
+}
+
+table.sidebar-table {
+	font-size: 12px;
+    line-height: 1.42857;
+	margin-bottom: 0;
+}
+
+table.sidebar-table td { padding:1px !important; }
+table.leaveTable th, table.leaveTable td {
+	padding: 1px !important;
+}
+.mark {
+	color: #cc0000;
+	background-color: transparent;
+	padding: 0;
+}
+.no-record{
+	width: 100%;	
+	height: 200px;
+	text-align: center;
+}
+.clickable-row {
+	cursor: pointer;
+}
+
+.border { border:1px solid #000; }
+
+div.fileBox{
+	display: inline-block;
+	border-top:1px dashed #d5d1b6;
+	border-bottom:1px dashed #d5d1b6;
+    text-align: left;
+	vertical-align: bottom;
+	margin-bottom: 15px;
+	padding:10px 0 10px 15px;
+}
+
+#leaveFileTable > tbody > tr {
+    border-bottom: 1px solid #ddd;
+}
+
+
+/* Leave Request Leave Request */
+
+.squareBox{
+    background: none repeat scroll 0 0 #e4e4ea;
+    border-radius: 3px;
+    #box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    position: relative;
+    width: 100%;
+	padding:5px;
+	
+}
+.squareBox p, .squareBox label {
+	margin-bottom: 0;
+}
+.squareBox label {
+	padding-right: 8px;
+	text-align: right;
+}
+
+.squareBoxHeader {
+	text-align:center;
+	background-color: #428F89; 
+	color:#ffffff; 
+	font-weight:bold; 
+}
+
+.noFound {
+	padding: 20px;
+	margin: 30px;
+	text-align: center;
+	color: red;
+}
+
+.leaveBox {
+	#margin: 10px 0;
+}
